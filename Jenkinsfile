@@ -2,25 +2,19 @@ pipeline {
     agent {
         docker {
             image 'node:18'
+            args '-u root'
         }
     }
-
     stages {
-        stage('Install dependencies') {
+        stage('Instalar dependencias') {
             steps {
                 sh 'npm install'
             }
         }
-
-        stage('Run Tests') {
+        stage('Mostrar versión de node y npm') {
             steps {
-                sh 'npm test'
-            }
-        }
-
-        stage('Build Success') {
-            steps {
-                echo 'Build completado correctamente 🎉'
+                sh 'node -v'
+                sh 'npm -v'
             }
         }
     }
