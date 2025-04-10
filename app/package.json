@@ -1,0 +1,14 @@
+{
+  "name": "ci-cd-node-project",
+  "version": "1.0.0",
+  "description": "Proyecto básico de Node.js para pruebas CI/CD",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Alejandro Suarez Zuñiga",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
